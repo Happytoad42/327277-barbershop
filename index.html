@@ -11,7 +11,7 @@
           <a class="main-page-logo" >
             <img src="img/index-logo.svg" width="371" height="155" alt="Логотип барбершопа «Бородинский»">
           </a>
-        <ul>
+        <ul class="user-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="news.html">Новости</a></li>
           <li><a href="price-list.html">Прайс-лист</a></li>
@@ -21,7 +21,7 @@
       </nav>
       <nav class="user-navigation">
         <ul>
-          <li><a href="login-link">Вход</a></li>
+          <li><a class="login-link" href="login-link">Вход</a></li>
         </ul>
       </nav>
     </header>
@@ -63,8 +63,8 @@
             <figure class="gallery-content">
               <a href="#"><img src="img/gallery-photo.jpg" width="286" height="164" alt="Интерьер студии"></a>
             </figure>
-            <span class="button gallery-button gallery-button-back">Назад</span>
-            <span class="button gallery-button gallery-button-forward">Вперед</span>
+            <button class="button gallery-button gallery-button-back">Назад</button>
+            <button class="button gallery-button gallery-button-forward">Вперед</button>
           </section>
           <section class="contats">
             <h2 class="header2">Контакты</h2>
@@ -81,17 +81,17 @@
             <h2 class="header2">Записаться</h2>
             <p class="appointment-info">Укажите желаему дату и время и мы свяжемся с вами для подтерждения брони</p>
             <form class="appointment-form" action="/echo.htmlacademy.ru" method="post">
-              <p class="appointment-item">Дата
-                <input type="text" name="date" value="" placeholder="08.10.2017"/>
+              <p class="appointment-item"><label for="appointment-date">Дата</label>
+                <input id="appointment-date" type="text" name="date" value="" placeholder="08.10.2017"/>
               </p>
-              <p class="appointment-item">Время
-                <input type="text" name="time" value="" placeholder="10:00"/>
+              <p class="appointment-item"><label for="appointment-time">Время</label>
+                <input id="appointment-time" type="text" name="time" value="" placeholder="10:00"/>
               </p>
-              <p class="appointment-item">Ваше имя
-                <input type="text" name="name" value="" placeholder="Борода"/>
+              <p class="appointment-item"><label for="appointment-name">Ваше имя</label>
+                <input id="appointment-name" type="text" name="name" value="" placeholder="Борода"/>
               </p>
-              <p class="appointment-item">Телефон
-                <input type="tel" name="phone" value="" placeholder="+7 (123) 456-78-90"/>
+              <p class="appointment-item"><label for="appointment-phone">Телефон</label>
+                <input id="appointment-phone" type="tel" name="phone" value="" placeholder="+7 (123) 456-78-90"/>
               </p>
             </form>
             <button class="button" type="submit">Отправить</button>
@@ -122,23 +122,28 @@
             <p>Введите пожалуйста свой логин и пароль</p>
               <form class="login-form"  action="https://echo.htmlacademy.ru" method="post">
                 <p>
-                  <input class="login-icon-user" type="text" name="login" placeholder="Логин">
+                  <input class="login-icon-user" id="modal-login" type="text" name="login" placeholder="Логин">
+                  <label class="visually-hidden" for="modal-login">Войти</label>
                 </p>
                 <p>
-                  <input class="password-icon-user" type="password" name="password" placeholder="Пароль">
+                  <input class="password-icon-user" id="modal-password" type="password" name="password" placeholder="Пароль">
+                  <label class="visually-hidden" for="modal-password">Пароль</label>
                 </p>
                 <p>
-                  <input class="visually-hidden" type="checkbox" name="remember">Запомните меня
+                  <label class="login-checkboix">
+                  <input class="visually-hidden" type="checkbox" name="remember">
+                  <span class="checkbox-indicator"></span>Запомните меня
+                  </label>
                   <a class="restore" href="restore.html">Я забыл пароль!</a>
                 </p>
                 <button class="button" type="submit">Войти</button>
               </form>
-              <span class="modal-close">x</span>
+              <button class="modal-close" type="button">Закрыть</span>
             </section>
             <section class="modal modal-map">
               <h2 class="visually-hidden">Как до нас добраться</h2>
               <img class="map-placeholder" src="img/map.jpg" width="766" height="560" alt="Санкт-Петербург, ул. Большая Конюшенная, дом 19"/>
-              <span class="modal-close">x</span>
+              <button class="modal-close" type="button">Закрыть</span>
             </section>
   </body>
 </html>
