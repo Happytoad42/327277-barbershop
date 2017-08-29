@@ -2,7 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <title>Барбершоп «Бородинский»</title>
   </head>
   <body>
@@ -20,7 +22,7 @@
         </ul>
       </nav>
       <nav class="user-navigation">
-        <ul>
+        <ul class="site-navigation">
           <li><a class="login-link" href="login-link">Вход</a></li>
         </ul>
       </nav>
@@ -44,8 +46,9 @@
           </li>
         </ul>
       </section>
+      <div class="index-column">
         <section class="news">
-          <h2 class="header2">Новости</h2>
+          <h2>Новости</h2>
             <ul class="news-list">
               <li class="news-item">
                 <p>Нам наконец завезли Ягермастер! Теперь вы можете пропустить стаканчик во время стрижки</p>
@@ -57,15 +60,17 @@
               </li>
             </ul>
             <a class="button" href="news.html">Все новости</a>
-          </section>
-          <section class="photo-gallery">
-            <h2 class="header2">Фотогаллерея</h2>
+        </section>
+        <section class="photo-gallery">
+            <h2>Фотогаллерея</h2>
             <figure class="gallery-content">
               <a href="#"><img src="img/gallery-photo.jpg" width="286" height="164" alt="Интерьер студии"></a>
             </figure>
             <button class="button gallery-button gallery-button-back" type="button">Назад</button>
             <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
-          </section>
+        </section>
+      </div>
+      <div class="index-column">
           <section class="contats">
             <h2 class="header2">Контакты</h2>
             <p>Барбершоп «Бородинский»<br>
@@ -96,6 +101,7 @@
             </form>
             <button class="button" type="submit">Отправить</button>
           </section>
+        </div>
           </main>
           <footer class="main-footer">
             <section class="footer-contacts">
